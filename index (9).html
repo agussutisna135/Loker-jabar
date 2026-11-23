@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info Loker Jabar - Lowongan Kerja Jawa Barat Terbaru & Terpercaya</title>
+<meta name="description" content="Info lowongan kerja terbaru di seluruh Jawa Barat (Sukabumi, Bogor, Bandung, Bekasi, Karawang). Update loker pabrik, kantor, retail & BUMN setiap hari. Gratis tanpa pungutan biaya.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LokerJabar.my.id">
+<meta property="og:title" content="Info Loker Jabar - Lowongan Kerja Jawa Barat Terbaru & Terpercaya">
+<meta property="og:description" content="Update loker pabrik, kantor, retail & BUMN di Jawa Barat setiap hari. Gratis tanpa pungutan biaya!">
+<meta property="og:image" content="https://lokerjabar.my.id/og-default.png">
+<meta property="og:url" content="https://lokerjabar.my.id/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --primary: #0d6efd;
+    --primary-dark: #0a58ca;
+    --wa: #198754;
+    --wa-dark: #146c43;
+    --tg: #0088cc;
+    --tg-dark: #006da3;
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* HEADER */
+  header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .brand-badge {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
+  .brand-text h1 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.1;
+  }
+  .brand-text span {
+    font-size: 11px;
+    color: var(--muted);
+    display: block;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #111827;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .btn-wa-top {
+    background: var(--wa);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 1.2;
+  }
+  .btn-wa-top:hover { background: var(--wa-dark); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+    color: #fff;
+    padding: 32px 16px;
+    text-align: center;
+  }
+  .hero-inner { max-width: 720px; margin: 0 auto; }
+  .hero h2 { font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+  .hero p { font-size: 14px; opacity: 0.92; margin-bottom: 20px; }
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .btn-hero-wa {
+    background: var(--wa);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .btn-hero-tg {
+    background: var(--tg);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* SEARCH BAR */
+  .search-wrap {
+    max-width: 960px;
+    margin: 16px auto 0;
+    padding: 0 16px;
+    display: none;
+  }
+  .search-wrap.active { display: block; }
+  .search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    background: #fff;
+    outline: none;
+  }
+  .search-input:focus { border-color: var(--primary); }
+
+  /* FILTER TABS */
+  .filter-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .filter-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  /* MAIN CONTAINER */
+  .container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+
+  /* ADSENSE SLOT */
+  .ad-box {
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    margin: 18px 0;
+    color: #94a3b8;
+    font-size: 12px;
+  }
+
+  /* SECTION HEADER */
+  .sec-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .sec-head h3 { font-size: 18px; font-weight: 800; }
+  .sec-head span { font-size: 12px; color: var(--muted); font-weight: 600; }
+
+  /* JOB CARDS */
+  .job-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .job-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+  }
+  .job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border-color: #bfdbfe;
+  }
+  .job-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .job-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.35;
+  }
+  .badge-new {
+    background: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .job-summary {
+    font-size: 13.5px;
+    color: #4b5563;
+    margin-bottom: 12px;
+  }
+  .job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* DETAIL VIEW & STATIC PAGES */
+  .detail-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f3f4f6;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+  }
+  .detail-card h2 { font-size: 22px; font-weight: 800; margin-bottom: 8px; color: #111827; }
+  .detail-card h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 20px 0 10px;
+    padding-left: 10px;
+    border-left: 4px solid var(--primary);
+  }
+  .detail-card ul { padding-left: 20px; margin-bottom: 12px; }
+  .detail-card li { margin-bottom: 6px; font-size: 14.5px; }
+  .detail-card p { font-size: 14.5px; margin-bottom: 12px; color: #374151; }
+  .btn-apply {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .share-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 20px;
+  }
+  .share-box h4 { font-size: 14px; color: #166534; margin-bottom: 8px; }
+  .share-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn-copy-wa {
+    background: var(--wa);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .btn-join-tg {
+    background: var(--tg);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    display: inline-block;
+  }
+
+  /* MODAL ADMIN */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal-box {
+    background: #fff;
+    width: 100%;
+    max-width: 640px;
+    border-radius: 14px;
+    padding: 22px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .btn-close {
+    background: #f3f4f6;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .form-group { margin-bottom: 12px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .btn-submit {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .btn-download-html {
+    background: var(--wa);
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .admin-job-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f9fafb;
+  }
+  .admin-job-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-sm-blue { background: #dbeafe; color: #1e40af; }
+  .btn-sm-green { background: #dcfce7; color: #166534; }
+  .btn-sm-red { background: #fee2e2; color: #991b1b; }
+
+  /* FOOTER */
+  footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+    padding: 28px 16px;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 14px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #374151;
+  }
+  .footer-links a:hover { color: var(--primary); }
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .copyright { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand" id="secretBrand" title="Info Loker Jabar">
+      <div class="brand-badge">LOKER</div>
+      <div class="brand-text">
+        <h1>Info Loker Jabar</h1>
+        <span>Terbaru &amp; Terpercaya</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn-icon" onclick="toggleSearch()" aria-label="Cari Lowongan">&#128269;</button>
+      <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" rel="noopener" class="btn-wa-top">
+        &#128226; SALURAN WA
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="heroSection">
+  <div class="hero-inner">
+    <h2>Info Lowongan Kerja Jawa Barat</h2>
+    <p>Update loker pabrik, kantor, retail &amp; BUMN setiap hari.<br>Gratis tanpa pungutan biaya!</p>
+    <div class="hero-btns">
+      <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" rel="noopener" class="btn-hero-wa">
+        &#128226; Ikuti Saluran WhatsApp Resmi
+      </a>
+      <a href="https://t.me/lokersukabumijabar" target="_blank" rel="noopener" class="btn-hero-tg">
+        &#9992;&#65039; Gabung Grup Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="search-wrap" id="searchWrap">
+  <input type="text" id="searchInput" class="search-input" placeholder="Cari posisi, nama perusahaan, atau kota..." oninput="renderJobs()">
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="setFilter('Semua', this)">Semua Wilayah</button>
+    <button class="filter-btn" onclick="setFilter('Sukabumi', this)">Sukabumi</button>
+    <button class="filter-btn" onclick="setFilter('Bogor', this)">Bogor</button>
+    <button class="filter-btn" onclick="setFilter('Bandung', this)">Bandung</button>
+    <button class="filter-btn" onclick="setFilter('Bekasi', this)">Bekasi</button>
+    <button class="filter-btn" onclick="setFilter('Karawang', this)">Karawang</button>
+  </div>
+</div>
+
+<main class="container">
+  <!-- SLOT IKLAN ADSENSE ATAS -->
+  <div class="ad-box">
+    <!-- Tempel kode unit iklan Google AdSense Anda di sini -->
+    [Slot Iklan Google AdSense Responsif]
+  </div>
+
+  <!-- HALAMAN UTAMA DAFTAR LOKER -->
+  <div id="homeView">
+    <div class="sec-head">
+      <h3>&#128227; Lowongan Terbaru Hari Ini</h3>
+      <span>Update 2026</span>
+    </div>
+    <div class="job-list" id="jobList"></div>
+  </div>
+
+  <!-- HALAMAN DETAIL LOKER -->
+  <div id="detailView" style="display:none;"></div>
+
+  <!-- HALAMAN STATIS WAJIB ADSENSE -->
+  <div id="staticPageView" style="display:none;"></div>
+
+  <!-- SLOT IKLAN ADSENSE BAWAH -->
+  <div class="ad-box">
+    <!-- Tempel kode unit iklan Google AdSense Anda di sini -->
+    [Slot Iklan Google AdSense Bawah]
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="#home" onclick="showHome(); return false;">Beranda</a>
+    <a href="#about" onclick="showStaticPage('about'); return false;">Tentang Kami</a>
+    <a href="#contact" onclick="showStaticPage('contact'); return false;">Kontak</a>
+    <a href="#privacy" onclick="showStaticPage('privacy'); return false;">Kebijakan Privasi (Privacy Policy)</a>
+    <a href="#disclaimer" onclick="showStaticPage('disclaimer'); return false;">Penafian (Disclaimer)</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" rel="noopener" style="color:var(--wa);">Saluran WhatsApp</a>
+    <span>&bull;</span>
+    <a href="https://t.me/lokersukabumijabar" target="_blank" rel="noopener" style="color:var(--tg);">Grup Telegram</a>
+  </div>
+  <p class="copyright">&copy; 2026 LokerJabar.my.id - Portal Informasi Lowongan Kerja Jawa Barat.</p>
+</footer>
+
+<!-- MODAL LOGIN ADMIN -->
+<div class="modal-backdrop" id="loginModal">
+  <div class="modal-box" style="max-width:400px;">
+    <div class="modal-head">
+      <h3>Akses Admin LokerJabar</h3>
+      <button class="btn-close" onclick="closeModals()">X</button>
+    </div>
+    <div class="form-group">
+      <label>Masukkan Kata Sandi Admin</label>
+      <input type="password" id="adminPassInput" class="form-control" placeholder="Kata sandi...">
+    </div>
+    <button class="btn-submit" onclick="verifyAdmin()">Masuk Panel Admin</button>
+  </div>
+</div>
+
+<!-- MODAL PANEL ADMIN -->
+<div class="modal-backdrop" id="adminModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>Panel Admin - Kelola Lowongan</h3>
+      <button class="btn-close" onclick="closeModals()">X</button>
+    </div>
+
+    <h4 style="margin-bottom:10px; color:var(--primary);">+ Tambah Lowongan Kerja Baru</h4>
+    <div class="form-group">
+      <label>Judul Lowongan</label>
+      <input type="text" id="fTitle" class="form-control" placeholder="Contoh: Lowongan Kerja PT Mayora Indah Tbk Terbaru">
+    </div>
+    <div class="form-group">
+      <label>Nama Perusahaan</label>
+      <input type="text" id="fCompany" class="form-control" placeholder="Contoh: PT Mayora Indah Tbk">
+    </div>
+    <div class="form-group">
+      <label>Wilayah Penempatan</label>
+      <select id="fLocation" class="form-control">
+        <option value="Sukabumi">Sukabumi</option>
+        <option value="Bogor">Bogor</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Bekasi">Bekasi</option>
+        <option value="Karawang">Karawang</option>
+        <option value="Jawa Barat">Jawa Barat (Umum)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Logo Perusahaan (Opsional - untuk Kartu Pratinjau WhatsApp)</label>
+      <input type="file" id="fLogo" class="form-control" accept="image/*">
+    </div>
+    <div class="form-group">
+      <label>Ringkasan Singkat (Muncul di kartu depan &amp; deskripsi WA)</label>
+      <textarea id="fSummary" class="form-control" rows="2" placeholder="Contoh: PT Mayora Indah Tbk membuka lowongan kerja posisi Operator Produksi &amp; QC..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Profil Perusahaan</label>
+      <textarea id="fProfile" class="form-control" rows="2" placeholder="Penjelasan singkat tentang perusahaan..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Posisi yang Dibutuhkan (Pisahkan dengan baris baru / Enter)</label>
+      <textarea id="fPositions" class="form-control" rows="3" placeholder="Operator Produksi&#10;Operator Packaging&#10;Quality Control (QC)"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Kualifikasi Umum (Pisahkan dengan baris baru / Enter)</label>
+      <textarea id="fQualifications" class="form-control" rows="3" placeholder="Pria / Wanita usia 18-25 tahun&#10;Pendidikan minimal SMA/SMK sederajat"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Cara Melamar</label>
+      <textarea id="fHowToApply" class="form-control" rows="2" placeholder="Kirimkan lamaran melalui formulir resmi perusahaan di bawah ini."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Tautan Pendaftaran / Email HRD</label>
+      <input type="text" id="fApplyLink" class="form-control" placeholder="https://... atau mailto:hrd@perusahaan.com">
+    </div>
+
+    <button class="btn-submit" onclick="addNewJob()">+ Tambahkan ke Daftar Lowongan</button>
+    <button class="btn-download-html" onclick="downloadUpdatedHTML()">&#11015;&#65039; Download File index.html Terbaru (Unggah ke GitHub)</button>
+
+    <hr style="margin:20px 0; border:none; border-top:1px solid var(--border);">
+    <h4 style="margin-bottom:10px;">Daftar Lowongan &amp; Buat Kartu Bagikan Medsos</h4>
+    <div id="adminJobList"></div>
+  </div>
+</div>
+
+<canvas id="ogCanvas" width="1200" height="630" style="display:none;"></canvas>
+
+<script id="jobsDataScript">
+const jobsData = [
+  {
+    id: "lowongan-mayora-group-2026",
+    title: "Lowongan Kerja Mayora Group (PT Mayora Indah Tbk) Terbaru",
+    company: "PT Mayora Indah Tbk",
+    location: "Sukabumi",
+    date: "23 Nov 2026",
+    badge: "TERBARU",
+    logoData: "",
+    summary: "PT Mayora Indah Tbk (Mayora Group) membuka kesempatan berkarir untuk lulusan SMA/SMK sederajat di posisi Operator Produksi, Packaging, QC, dan Staff Administrasi.",
+    profile: "PT Mayora Indah Tbk (Mayora Group) merupakan salah satu kelompok bisnis produk konsumen terkemuka di Indonesia yang memproduksi berbagai makanan dan minuman olahan berkualitas yang dipasarkan di dalam negeri maupun mancanegara.",
+    positions: [
+      "Operator Produksi",
+      "Operator Packaging",
+      "Quality Control (QC)",
+      "Staff Administrasi"
+    ],
+    qualifications: [
+      "Pria / Wanita, usia minimal 18 tahun dan maksimal 25 tahun.",
+      "Pendidikan minimal SMA / SMK sederajat semua jurusan.",
+      "Sehat jasmani dan rohani, tidak buta warna.",
+      "Bersedia bekerja dengan sistem shift dan mematuhi standar keamanan pangan.",
+      "Penempatan area pabrik Jawa Barat (Sukabumi / Bogor / Bekasi)."
+    ],
+    howToApply: "Bagi pelamar yang memenuhi kualifikasi di atas, silakan daftarkan diri secara gratis melalui portal rekrutmen resmi atau email HRD pada tautan di bawah ini. Waspada penipuan, proses seleksi tidak dipungut biaya apa pun.",
+    applyLink: "https://www.mayoraindah.co.id/karir"
+  },
+  {
+    id: "lowongan-indomaret-sukabumi-2026",
+    title: "Lowongan Kerja PT Indomarco Prismatama (Indomaret) Terbaru",
+    company: "PT Indomarco Prismatama",
+    location: "Sukabumi",
+    date: "23 Nov 2026",
+    badge: "TERBARU",
+    logoData: "",
+    summary: "PT Indomarco Prismatama (Indomaret Group) membutuhkan tenaga kerja baru posisi Crew Boy / Girl untuk penempatan cabang Sukabumi dan sekitarnya.",
+    profile: "PT Indomarco Prismatama (Indomaret Group) merupakan perusahaan jaringan ritel waralaba terbesar di Indonesia di bawah naungan Salim Group yang berdiri sejak tahun 1988.",
+    positions: [
+      "Crew Boy / Girl (Pramuniaga & Kasir)"
+    ],
+    qualifications: [
+      "Pria / Wanita, belum menikah, usia maksimal 25 tahun.",
+      "Pendidikan minimal SMA / SMK sederajat.",
+      "Berpenampilan menarik, jujur, disiplin, dan komunikatif.",
+      "Bersedia bekerja dengan sistem shift di seluruh cabang area penempatan."
+    ],
+    howToApply: "Kirimkan lamaran lengkap melalui situs resmi rekrutmen Indomaret atau ikuti jadwal seleksi langsung di cabang terdekat tanpa pungutan biaya.",
+    applyLink: "https://career.indomaretgroup.com"
+  }
+];
+</script>
+
+<script>
+let currentFilter = 'Semua';
+
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
+function toggleSearch() {
+  const wrap = document.getElementById('searchWrap');
+  wrap.classList.toggle('active');
+  if (wrap.classList.contains('active')) {
+    document.getElementById('searchInput').focus();
+  }
+}
+
+function setFilter(loc, btn) {
+  currentFilter = loc;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  showHome();
+  renderJobs();
+}
+
+function renderJobs() {
+  const list = document.getElementById('jobList');
+  const query = (document.getElementById('searchInput').value || '').toLowerCase();
+  list.innerHTML = '';
+
+  const filtered = jobsData.filter(job => {
+    const matchLoc = currentFilter === 'Semua' || job.location.toLowerCase() === currentFilter.toLowerCase();
+    const matchQuery = !query ||
+      job.title.toLowerCase().includes(query) ||
+      job.company.toLowerCase().includes(query) ||
+      job.location.toLowerCase().includes(query) ||
+      job.positions.join(' ').toLowerCase().includes(query);
+    return matchLoc && matchQuery;
+  });
+
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="detail-card"><p style="text-align:center;color:var(--muted);">Belum ada lowongan yang cocok dengan pencarian atau filter wilayah ini.</p></div>';
+    return;
+  }
+
+  filtered.forEach(job => {
+    const card = document.createElement('div');
+    card.className = 'job-card';
+    card.onclick = () => openJobDetail(job.id);
+    const posTags = job.positions.slice(0, 3).map(p => `<span class="tag">${p}</span>`).join('');
+    card.innerHTML = `
+      <div class="job-card-top">
+        <div class="job-title">${job.title}</div>
+        <span class="badge-new">${job.badge || 'TERBARU'}</span>
+      </div>
+      <div class="job-meta">
+        <span>&#127970; ${job.company}</span>
+        <span>&#128205; ${job.location}</span>
+        <span>&#128197; ${job.date}</span>
+      </div>
+      <p class="job-summary">${job.summary}</p>
+      <div class="job-tags">${posTags}</div>
+    `;
+    list.appendChild(card);
+  });
+}
+
+function openJobDetail(id) {
+  const job = jobsData.find(j => j.id === id);
+  if (!job) return;
+
+  window.history.replaceState({}, '', '?job=' + encodeURIComponent(job.id));
+  document.getElementById('homeView').style.display = 'none';
+  document.getElementById('staticPageView').style.display = 'none';
+  document.getElementById('heroSection').style.display = 'none';
+
+  const detail = document.getElementById('detailView');
+  detail.style.display = 'block';
+
+  const shareUrl = `https://lokerjabar.my.id/${job.id}.html`;
+  const posList = job.positions.map(p => `<li><strong>${p}</strong></li>`).join('');
+  const qualList = job.qualifications.map(q => `<li>${q}</li>`).join('');
+
+  detail.innerHTML = `
+    <div class="detail-card">
+      <button class="btn-back" onclick="showHome()">&larr; Kembali ke Daftar Loker</button>
+      <div class="job-meta">
+        <span>&#127970; ${job.company}</span>
+        <span>&#128205; ${job.location}</span>
+        <span>&#128197; ${job.date}</span>
+      </div>
+      <h2>${job.title}</h2>
+      <p>${job.profile}</p>
+
+      <h3>Posisi yang Dibutuhkan:</h3>
+      <ul>${posList}</ul>
+
+      <h3>Kualifikasi Umum:</h3>
+      <ul>${qualList}</ul>
+
+      <h3>Cara Melamar:</h3>
+      <p>${job.howToApply}</p>
+
+      <a href="${job.applyLink}" target="_blank" rel="noopener" class="btn-apply">Lamar Pekerjaan Ini Sekarang</a>
+
+      <div class="share-box">
+        <h4>Bagikan Info Lowongan &amp; Ikuti Pembaruan:</h4>
+        <div class="share-actions">
+          <button class="btn-copy-wa" onclick="copyShareFormat('${job.id}')">&#128203; Salin Format Postingan Saluran WhatsApp</button>
+          <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" rel="noopener" class="btn-copy-wa" style="background:#146c43;">Saluran WhatsApp</a>
+          <a href="https://t.me/lokersukabumijabar" target="_blank" rel="noopener" class="btn-join-tg">Grup Telegram</a>
+        </div>
+      </div>
+    </div>
+  `;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function copyShareFormat(id) {
+  const job = jobsData.find(j => j.id === id);
+  if (!job) return;
+  const posBullets = job.positions.map(p => `• ${p}`).join('\n');
+  const shareUrl = `https://lokerjabar.my.id/${job.id}.html`;
+  const text = `${job.title.toUpperCase()}\n\nDibutuhkan Untuk Posisi :\n\n${posBullets}\n\nInfo selengkapnya Klik tautan dibawah ini.\n\n${shareUrl}\n\n--------------------\n\nGabung ke Channel WhatsApp & Telegram :\n\n📌 Channel WhatsApp :\nhttps://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d\n\n📌 Grup Telegram :\nhttps://t.me/lokersukabumijabar`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Format postingan WhatsApp & Telegram berhasil disalin! Silakan tempel (paste) di Saluran WhatsApp Anda.');
+  });
+}
+
+function showHome() {
+  window.history.replaceState({}, '', window.location.pathname);
+  document.getElementById('homeView').style.display = 'block';
+  document.getElementById('heroSection').style.display = 'block';
+  document.getElementById('detailView').style.display = 'none';
+  document.getElementById('staticPageView').style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showStaticPage(type) {
+  document.getElementById('homeView').style.display = 'none';
+  document.getElementById('detailView').style.display = 'none';
+  document.getElementById('heroSection').style.display = 'none';
+  const box = document.getElementById('staticPageView');
+  box.style.display = 'block';
+
+  const pages = {
+    about: `
+      <h2>Tentang Kami - LokerJabar.my.id</h2>
+      <p><strong>LokerJabar.my.id</strong> adalah portal informasi lowongan kerja independen yang berfokus menyajikan pembaruan kesempatan karier di seluruh wilayah Provinsi Jawa Barat, meliputi Sukabumi, Bogor, Bandung, Bekasi, Karawang, dan sekitarnya.</p>
+      <p>Misi kami adalah membantu para pencari kerja mendapatkan akses informasi rekrutmen yang akurat, jelas, dan mudah dipahami tanpa pungutan biaya apa pun.</p>
+    `,
+    contact: `
+      <h2>Hubungi Kami (Kontak)</h2>
+      <p>Apabila Anda memiliki pertanyaan, saran, masukan, atau perwakilan HRD perusahaan yang ingin mempublikasikan informasi lowongan kerja secara gratis di <strong>LokerJabar.my.id</strong>, silakan hubungi kami melalui:</p>
+      <ul>
+        <li><strong>Email Redaksi:</strong> redaksi@lokerjabar.my.id</li>
+        <li><strong>Saluran WhatsApp Resmi:</strong> <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" style="color:var(--primary);text-decoration:underline;">Info Loker Jabar WhatsApp Channel</a></li>
+        <li><strong>Grup Telegram:</strong> <a href="https://t.me/lokersukabumijabar" target="_blank" style="color:var(--primary);text-decoration:underline;">t.me/lokersukabumijabar</a></li>
+      </ul>
+    `,
+    privacy: `
+      <h2>Kebijakan Privasi (Privacy Policy)</h2>
+      <p>Privasi pengunjung <strong>LokerJabar.my.id</strong> sangat penting bagi kami. Dokumen kebijakan privasi ini menjelaskan jenis informasi pribadi yang diterima dan dikumpulkan oleh LokerJabar.my.id serta bagaimana informasi tersebut digunakan.</p>
+      <h3>File Log &amp; Cookie</h3>
+      <p>Seperti situs web pada umumnya, LokerJabar.my.id menggunakan file log standar dan cookie untuk menyimpan informasi preferensi pengunjung serta menganalisis tren penggunaan situs.</p>
+      <h3>Cookie DoubleClick DART &amp; Google AdSense</h3>
+      <p>Google, sebagai vendor pihak ketiga, menggunakan cookie untuk menayangkan iklan di LokerJabar.my.id. Penggunaan cookie DART oleh Google memungkinkan penayangan iklan kepada pengguna berdasarkan kunjungan mereka ke situs ini dan situs lainnya di internet. Pengguna dapat membatalkan penggunaan cookie DART dengan mengunjungi Kebijakan Privasi jaringan iklan dan konten Google.</p>
+    `,
+    disclaimer: `
+      <h2>Penafian (Disclaimer)</h2>
+      <p>Seluruh informasi lowongan kerja yang dipublikasikan di <strong>LokerJabar.my.id</strong> bersumber dari pengumuman resmi perusahaan, portal karier terpercaya, dan informasi rekrutmen terbuka yang ditujukan untuk membantu pencari kerja.</p>
+      <p><strong>Peringatan Penting:</strong> LokerJabar.my.id bukan agen penyalur tenaga kerja dan <strong>tidak pernah memungut biaya apa pun</strong> dalam proses rekrutmen. Harap berhati-hati terhadap oknum yang mengatasnamakan perusahaan atau situs kami untuk meminta transfer uang transportasi, akomodasi, maupun biaya administrasi.</p>
+    `
+  };
+
+  box.innerHTML = `<div class="detail-card"><button class="btn-back" onclick="showHome()">&larr; Kembali ke Beranda</button>${pages[type] || ''}</div>`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* SECRET ADMIN TRIGGER (5x TAP) */
+let tapCount = 0;
+let tapTimer = null;
+document.getElementById('secretBrand').addEventListener('click', () => {
+  tapCount++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
+  if (tapCount >= 5) {
+    tapCount = 0;
+    document.getElementById('loginModal').classList.add('open');
+    document.getElementById('adminPassInput').value = '';
+    document.getElementById('adminPassInput').focus();
+  } else if (tapCount === 1) {
+    showHome();
+  }
+});
+
+function closeModals() {
+  document.getElementById('loginModal').classList.remove('open');
+  document.getElementById('adminModal').classList.remove('open');
+}
+
+function verifyAdmin() {
+  const pass = document.getElementById('adminPassInput').value;
+  if (pass === 'jabar2026') {
+    document.getElementById('loginModal').classList.remove('open');
+    document.getElementById('adminModal').classList.add('open');
+    renderAdminJobList();
+  } else {
+    alert('Kata sandi salah!');
+  }
+}
+
+function renderAdminJobList() {
+  const container = document.getElementById('adminJobList');
+  container.innerHTML = '';
+  jobsData.forEach((job, idx) => {
+    const div = document.createElement('div');
+    div.className = 'admin-job-item';
+    div.innerHTML = `
+      <strong>${job.title}</strong><br>
+      <small style="color:var(--muted);">${job.company} &bull; ${job.location} &bull; File Medsos: <code>${job.id}.html</code></small>
+      <div class="admin-job-actions">
+        <button class="btn-sm btn-sm-blue" onclick="downloadSocialCardAssets(${idx})">&#128444;&#65039; Download Kartu Putih WA (.png)</button>
+        <button class="btn-sm btn-sm-green" onclick="downloadSocialShareHTML(${idx})">&#128196; Download File Bagikan WA (${job.id}.html)</button>
+        <button class="btn-sm btn-sm-red" onclick="deleteJob(${idx})">Hapus</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function addNewJob() {
+  const title = document.getElementById('fTitle').value.trim();
+  const company = document.getElementById('fCompany').value.trim();
+  const location = document.getElementById('fLocation').value;
+  const summary = document.getElementById('fSummary').value.trim();
+  const profile = document.getElementById('fProfile').value.trim();
+  const positions = document.getElementById('fPositions').value.split('\n').map(s => s.trim()).filter(Boolean);
+  const qualifications = document.getElementById('fQualifications').value.split('\n').map(s => s.trim()).filter(Boolean);
+  const howToApply = document.getElementById('fHowToApply').value.trim();
+  const applyLink = document.getElementById('fApplyLink').value.trim() || '#';
+  const logoInput = document.getElementById('fLogo');
+
+  if (!title || !company || positions.length === 0) {
+    alert('Harap isi minimal Judul Lowongan, Nama Perusahaan, dan Posisi.');
+    return;
+  }
+
+  const today = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' });
+  const id = slugify(title) + '-' + Date.now().toString().slice(-4);
+
+  const finalizeAdd = (logoDataUrl) => {
+    jobsData.unshift({
+      id,
+      title,
+      company,
+      location,
+      date: today,
+      badge: 'TERBARU',
+      logoData: logoDataUrl || '',
+      summary: summary || `${company} membuka lowongan kerja terbaru untuk penempatan wilayah ${location}.`,
+      profile: profile || `${company} merupakan perusahaan yang sedang berkembang dan membuka kesempatan berkarier bagi kandidat terbaik.`,
+      positions,
+      qualifications: qualifications.length ? qualifications : ['Pendidikan minimal SMA/SMK sederajat', 'Sehat jasmani dan rohani', 'Siap bekerja secara tim maupun individu'],
+      howToApply: howToApply || 'Silakan kirimkan lamaran lengkap melalui tautan resmi di bawah ini.',
+      applyLink
+    });
+
+    ['fTitle','fCompany','fSummary','fProfile','fPositions','fQualifications','fHowToApply','fApplyLink'].forEach(fid => {
+      document.getElementById(fid).value = '';
+    });
+    logoInput.value = '';
+
+    renderJobs();
+    renderAdminJobList();
+    alert('Lowongan berhasil ditambahkan! Jangan lupa klik "Download File index.html Terbaru" dan "Download Kartu & File Bagikan WA" untuk diunggah ke GitHub.');
+  };
+
+  if (logoInput.files && logoInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = (e) => finalizeAdd(e.target.result);
+    reader.readAsDataURL(logoInput.files[0]);
+  } else {
+    finalizeAdd('');
+  }
+}
+
+function deleteJob(idx) {
+  if (confirm('Hapus lowongan ini dari daftar?')) {
+    jobsData.splice(idx, 1);
+    renderJobs();
+    renderAdminJobList();
+  }
+}
+
+/* DRAW WHITE WHATSAPP PREVIEW CARD (1200x630) LIKE LOKERSMI */
+function drawSocialCardCanvas(job, callback) {
+  const canvas = document.getElementById('ogCanvas');
+  const ctx = canvas.getContext('2d');
+  const W = 1200, H = 630;
+
+  // White background
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle geometric hexagon pattern top-left & bottom-right
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.lineWidth = 2;
+  const drawHex = (cx, cy, r) => {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+      const ang = (Math.PI / 3) * i;
+      const x = cx + r * Math.cos(ang);
+      const y = cy + r * Math.sin(ang);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+  };
+  drawHex(70, 70, 42); drawHex(143, 70, 42); drawHex(106, 133, 42); drawHex(70, 196, 42);
+  drawHex(1120, 430, 42); drawHex(1047, 430, 42); drawHex(1084, 493, 42); drawHex(1120, 556, 42);
+
+  // "WE'RE HIRING!" badge top-right
+  ctx.fillStyle = '#111827';
+  ctx.fillRect(965, 95, 130, 32);
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold 17px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText("WE'RE", 1030, 117);
+
+  ctx.strokeStyle = '#111827';
+  ctx.lineWidth = 2.5;
+  ctx.strokeRect(965, 132, 130, 32);
+  ctx.fillStyle = '#111827';
+  ctx.fillText("HIRING!", 1030, 154);
+
+  // Megaphone accent
+  ctx.fillStyle = '#f59e0b';
+  ctx.beginPath();
+  ctx.moveTo(1060, 75);
+  ctx.lineTo(1095, 55);
+  ctx.lineTo(1095, 95);
+  ctx.closePath();
+  ctx.fill();
+
+  // Company Name at Top Center
+  ctx.fillStyle = '#111827';
+  ctx.font = 'bold 38px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(job.company, W / 2, 110);
+
+  // Center Rounded Square Box for Company Logo
+  const boxSize = 210;
+  const boxX = (W - boxSize) / 2;
+  const boxY = 145;
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.roundRect(boxX, boxY, boxSize, boxSize, 26);
+  ctx.stroke();
+
+  // "Info Lengkap Cek di:" text
+  ctx.fillStyle = '#111827';
+  ctx.font = 'italic bold 24px sans-serif';
+  ctx.fillText('Info Lengkap Cek di :', W / 2, 405);
+
+  // Search Pill Bar "LokerJabar.my.id"
+  const barW = 540, barH = 62;
+  const barX = (W - barW) / 2;
+  const barY = 430;
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.roundRect(barX, barY, barW, barH, 31);
+  ctx.stroke();
+
+  // Blue Search Button on Right of Pill
+  ctx.fillStyle = '#1e40af';
+  ctx.beginPath();
+  ctx.roundRect(barX + barW - 95, barY, 95, barH, [0, 31, 31, 0]);
+  ctx.fill();
+
+  // Magnifying glass icon in white
+  ctx.strokeStyle = '#ffffff';
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.arc(barX + barW - 50, barY + 28, 11, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(barX + barW - 42, barY + 36);
+  ctx.lineTo(barX + barW - 33, barY + 45);
+  ctx.stroke();
+
+  // Domain Text inside Pill
+  ctx.fillStyle = '#111827';
+  ctx.font = 'bold 28px sans-serif';
+  ctx.fillText('LokerJabar.my.id', W / 2 - 42, barY + 41);
+
+  // Curved Arrow pointing to Search Bar
+  ctx.strokeStyle = '#1e40af';
+  ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.moveTo(barX - 75, barY + 95);
+  ctx.quadraticCurveTo(barX - 65, barY + 42, barX - 15, barY + 35);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(barX - 28, barY + 25);
+  ctx.lineTo(barX - 12, barY + 35);
+  ctx.lineTo(barX - 26, barY + 47);
+  ctx.stroke();
+
+  if (job.logoData) {
+    const img = new Image();
+    img.onload = () => {
+      const pad = 22;
+      const maxW = boxSize - pad * 2;
+      const maxH = boxSize - pad * 2;
+      const scale = Math.min(maxW / img.width, maxH / img.height);
+      const dw = img.width * scale;
+      const dh = img.height * scale;
+      ctx.drawImage(img, boxX + (boxSize - dw) / 2, boxY + (boxSize - dh) / 2, dw, dh);
+      callback(canvas.toDataURL('image/png'));
+    };
+    img.src = job.logoData;
+  } else {
+    // Draw clean company initials/name inside box if no logo uploaded
+    ctx.fillStyle = '#0d6efd';
+    ctx.font = 'bold 24px sans-serif';
+    const words = job.company.split(' ');
+    const line1 = words.slice(0, 2).join(' ');
+    const line2 = words.slice(2, 4).join(' ');
+    ctx.fillText(line1, W / 2, boxY + (line2 ? 98 : 112));
+    if (line2) ctx.fillText(line2, W / 2, boxY + 132);
+    callback(canvas.toDataURL('image/png'));
+  }
+}
+
+function downloadSocialCardAssets(idx) {
+  const job = jobsData[idx];
+  if (!job) return;
+  drawSocialCardCanvas(job, (dataUrl) => {
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = `og-${job.id}.png`;
+    a.click();
+  });
+}
+
+function downloadSocialShareHTML(idx) {
+  const job = jobsData[idx];
+  if (!job) return;
+  const shareHtml = `<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${job.title} - LokerJabar.my.id</title>
+<meta name="description" content="${job.summary}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LokerJabar.my.id">
+<meta property="og:title" content="${job.title}">
+<meta property="og:description" content="${job.summary}">
+<meta property="og:image" content="https://lokerjabar.my.id/og-${job.id}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://lokerjabar.my.id/${job.id}.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="refresh" content="0;url=https://lokerjabar.my.id/?job=${job.id}">
+</head>
+<body>
+<p>Mengalihkan ke detail lowongan... <a href="https://lokerjabar.my.id/?job=${job.id}">Klik di sini jika tidak otomatis beralih</a>.</p>
+<script>window.location.replace("https://lokerjabar.my.id/?job=${job.id}");<\/script>
+</body>
+</html>`;
+
+  const blob = new Blob([shareHtml], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${job.id}.html`;
+  a.click();
+}
+
+function downloadUpdatedHTML() {
+  const docClone = document.documentElement.cloneNode(true);
+  // Reset UI states in exported HTML
+  docClone.querySelector('#loginModal').classList.remove('open');
+  docClone.querySelector('#adminModal').classList.remove('open');
+  docClone.querySelector('#searchWrap').classList.remove('active');
+  docClone.querySelector('#searchInput').setAttribute('value', '');
+  docClone.querySelector('#homeView').style.display = 'block';
+  docClone.querySelector('#heroSection').style.display = 'block';
+  docClone.querySelector('#detailView').style.display = 'none';
+  docClone.querySelector('#detailView').innerHTML = '';
+  docClone.querySelector('#staticPageView').style.display = 'none';
+  docClone.querySelector('#staticPageView').innerHTML = '';
+  docClone.querySelector('#jobList').innerHTML = '';
+  docClone.querySelector('#adminJobList').innerHTML = '';
+
+  const dataScript = docClone.querySelector('#jobsDataScript');
+  dataScript.textContent = '\nconst jobsData = ' + JSON.stringify(jobsData, null, 2) + ';\n';
+
+  const finalHtml = '<!DOCTYPE html>\n' + docClone.outerHTML;
+  const blob = new Blob([finalHtml], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'index.html';
+  a.click();
+}
+
+// Init
+renderJobs();
+const params = new URLSearchParams(window.location.search);
+if (params.get('job')) {
+  openJobDetail(params.get('job'));
+}
+</script>
+</body>
+</html>
