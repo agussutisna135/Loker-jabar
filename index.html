@@ -370,5 +370,9 @@ window.addEventListener("hashchange",()=>{
 initializeJobs();
 })();
 </script>
+  <script>setInterval(()=>{const d=document.getElementById("detail");if(d&&!d.classList.contains("hide")&&!document.getElementById("btn-share-custom")){const b=document.createElement("button");b.id="btn-share-custom";b.innerHTML="📋 Salin Link & Info Lowongan Ini";b.style.cssText="background:#25D366;color:#fff;border:none;padding:12px 18px;border-radius:8px;font-weight:bold;cursor:pointer;margin:15px 0;width:100%;font-size:15px;display:block;";b.onclick=()=>{const e=d.querySelector("h1,h2,h3,.title,.job-title"),j=e?e.innerText:document.title,s=j.split("|")[0].trim().toLowerCase().replace(/[^a-z0-9\s-]/g,"").replace(/\s+/g,"-"),w=atob("d2hhdHNhcHAuY29tL2NoYW5uZWwvMDAyOVZiRWhMZjhHVTNCSWdBcFA4RDNk"),p=`Info Selengkapnya:\nlokerjabar.my.id/${s}\n\nChannel WhatsApp (LokerJabar Terupdate):\n${w}\n\nGrup Telegram (LokerJabar):\nt.me/lokersukabumijabar`;navigator.clipboard.writeText(p).then(()=>alert("Berhasil disalin!\n\nLink: lokerjabar.my.id/"+s))};d.appendChild(b)}},800);</script>
+
+
+
 </body>
 </html>
