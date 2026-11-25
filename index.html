@@ -245,6 +245,9 @@ function fitCenteredText(ctx,text,cx,y,maxWidth,startSize){let size=startSize;ct
 function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();ctx.fill()}
 
 async function posterBlob(canvas){return await new Promise(resolve=>canvas.toBlob(resolve,'image/png'))}
+function slugify(value){return String(value||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,90)||"lowongan"}
+function jobSlug(job){return slugify(job.title)+"-"+slugify(job.id)}
+function jobUrl(job){return location.origin+"/lowongan/"+jobSlug(job)}
 function openDetail(id){
 const j=jobs.find(x=>x.id===id);
 if(!j||j.status!=="published"||expired(j))return;
@@ -276,17 +279,17 @@ $("backBtn").onclick=showHome;
 $("waShare").onclick=()=>{
 const numbered=(j.positions||[]).map((pos,i)=>`${i+1}. ${pos}`).join("\n");
 const intro=j.summary||j.profile||`${j.company} membuka kesempatan kerja di ${j.location}.`;
-const officialLink=apply||source||location.href;
+const officialLink=jobUrl(j);
 const msg=`Lowongan Kerja ${j.company} ${j.location} Terbaru ${new Date().getFullYear()}\n\n${intro}\n\nDibutuhkan Untuk Posisi :\n\n${numbered||"Silakan cek link informasi untuk posisi yang tersedia."}\n\nInfo selengkapnya Klik tautan dibawah ini.\n\n${officialLink}\n\n━━━━━━━━━━━━━━━━━━\n\nGabung ke Channel WhatsApp :\n\n📌 Channel WhatsApp LokerJabar :\nhttps://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d\n\nChannel Telegram :\nhttps://t.me/lokersukabumijabar`;
 window.open("https://wa.me/?text="+encodeURIComponent(msg),"_blank","noopener")};
-$("copyLink").onclick=async()=>{try{await navigator.clipboard.writeText(location.origin+location.pathname+"?job="+encodeURIComponent(j.id));alert("Link lowongan disalin")}catch(e){alert("Tidak dapat menyalin otomatis; salin URL halaman dari browser")}};
+$("copyLink").onclick=async()=>{try{await navigator.clipboard.writeText(jobUrl(j));alert("Link lowongan disalin")}catch(e){alert("Tidak dapat menyalin otomatis; salin URL halaman dari browser")}};
 let currentPosterCanvas=null;const posterPreview=$('posterPreview'),posterImg=$('posterImg'),dlBtn=$('downloadPoster'),shareBtn=$('sharePoster');
 $('makePoster').onclick=()=>{currentPosterCanvas=makeJobPoster(j);posterImg.src=currentPosterCanvas.toDataURL('image/png');posterPreview.classList.add('open');dlBtn.classList.remove('hide');shareBtn.classList.remove('hide');posterPreview.scrollIntoView({behavior:'smooth',block:'start'})};
 dlBtn.onclick=()=>{if(!currentPosterCanvas)return;const a=document.createElement('a');a.download='poster-lowongan-'+(j.company||'loker').replace(/[^a-z0-9]+/gi,'-').toLowerCase()+'.png';a.href=currentPosterCanvas.toDataURL('image/png');a.click()};
-shareBtn.onclick=async()=>{if(!currentPosterCanvas)return;const blob=await posterBlob(currentPosterCanvas);if(!blob){alert('Poster tidak berhasil dibuat. Coba lagi.');return}const file=new File([blob],'poster-lowongan.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'Poster Lowongan Kerja',text:`Lowongan ${j.company} - ${j.location}`})}catch(err){if(err.name!=='AbortError')alert('Gagal membuka menu bagikan gambar. Silakan download poster.')}}else{dlBtn.click();alert('Poster sudah diunduh. Buka WhatsApp lalu lampirkan gambar poster dari Download.');const shareText=`Lowongan ${j.company} ${j.location}\nInfo: ${j.applyLink||j.source||location.href}`;window.open('https://wa.me/?text='+encodeURIComponent(shareText),'_blank','noopener')}};
-history.replaceState({}, "", "?job="+encodeURIComponent(j.id));window.scrollTo({top:0,behavior:"smooth"});
+shareBtn.onclick=async()=>{if(!currentPosterCanvas)return;const blob=await posterBlob(currentPosterCanvas);if(!blob){alert('Poster tidak berhasil dibuat. Coba lagi.');return}const file=new File([blob],'poster-lowongan.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'Poster Lowongan Kerja',text:`Lowongan ${j.company} - ${j.location}`})}catch(err){if(err.name!=='AbortError')alert('Gagal membuka menu bagikan gambar. Silakan download poster.')}}else{dlBtn.click();alert('Poster sudah diunduh. Buka WhatsApp lalu lampirkan gambar poster dari Download.');const shareText=`Lowongan ${j.title} - ${j.company} ${j.location}\nInfo: ${jobUrl(j)}`;window.open('https://wa.me/?text='+encodeURIComponent(shareText),'_blank','noopener')}};
+history.replaceState({}, "", "/lowongan/"+jobSlug(j));window.scrollTo({top:0,behavior:"smooth"});
 }
-function showHome(){history.replaceState({},"",location.pathname);$("home").classList.remove("hide");$("hero").classList.remove("hide");$("searchArea").classList.toggle("hide",!searchOpen);$("locationFilters").classList.remove("hide");$("categoryFilters").classList.remove("hide");$("detail").classList.add("hide");$("staticPage").classList.add("hide");window.scrollTo({top:0,behavior:"smooth"});renderJobs()}
+function showHome(){history.replaceState({},"", "/");$("home").classList.remove("hide");$("hero").classList.remove("hide");$("searchArea").classList.toggle("hide",!searchOpen);$("locationFilters").classList.remove("hide");$("categoryFilters").classList.remove("hide");$("detail").classList.add("hide");$("staticPage").classList.add("hide");window.scrollTo({top:0,behavior:"smooth"});renderJobs()}
 let searchOpen=false;
 $("searchToggle").onclick=()=>{searchOpen=!searchOpen;$("searchArea").classList.toggle("hide",!searchOpen);if(searchOpen)$("searchInput").focus()};
 $("searchInput").addEventListener("input",e=>{search=e.target.value.trim();renderJobs()});
@@ -320,8 +323,9 @@ $("exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify({backupVersion:1
 $("importBtn").onclick=()=>$("backupFile").click();
 $("backupFile").onchange=async e=>{const file=e.target.files?.[0];if(!file)return;try{const parsed=JSON.parse(await file.text());const imported=Array.isArray(parsed)?parsed:parsed.jobs;if(!Array.isArray(imported))throw new Error("Format JSON tidak sesuai");if(!confirm(`Pulihkan ${imported.length} data lowongan? Data akan digabung berdasarkan ID; lowongan yang sudah ada diperbarui, yang baru ditambahkan.`))return;const map=new Map(jobs.map(j=>[j.id,j]));imported.forEach(j=>{if(j&&j.id)map.set(j.id,j)});jobs=Array.from(map.values());if(!await saveJobs())return;renderJobs();renderAdmin();$("backupStatus").textContent=`Backup berhasil dipulihkan: ${imported.length} data dibaca. Total data sekarang ${jobs.length}.`;alert("Backup berhasil dipulihkan.")}catch(err){alert("Gagal memulihkan backup: "+err.message)}finally{e.target.value=""}};
 renderFilters();renderJobs();
-initializeJobs();
-const params=new URLSearchParams(location.search);const requested=params.get("job");if(requested){const found=jobs.find(j=>j.id===requested&&j.status==="published");if(found)openDetail(requested)}
+const params=new URLSearchParams(location.search);const requested=params.get("job");const pathMatch=location.pathname.match(/^\\/lowongan\\/([^/]+)\\/?$/);const requestedSlug=pathMatch?decodeURIComponent(pathMatch[1]):null;
+initializeJobs().then(()=>{if(requested){const found=jobs.find(j=>j.id===requested&&j.status==="published"&&!expired(j));if(found){openDetail(found.id)}else showMissingJob()}else if(requestedSlug){const found=jobs.find(j=>jobSlug(j)===requestedSlug&&j.status==="published"&&!expired(j));if(found){openDetail(found.id)}else showMissingJob()}});
+function showMissingJob(){ $("home").classList.add("hide");$("hero").classList.add("hide");$("searchArea").classList.add("hide");$("locationFilters").classList.add("hide");$("categoryFilters").classList.add("hide");$("detail").classList.remove("hide");$("detail").innerHTML='<div class="panel empty" style="margin:24px auto;max-width:760px"><h2>Lowongan tidak ditemukan</h2><p>Lowongan mungkin sudah ditutup, diarsipkan, atau alamat tautannya tidak tepat.</p><a class="btn btn-outline" href="/">Kembali ke beranda</a></div>'}
 })();
 </script>
 </body>
