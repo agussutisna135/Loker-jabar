@@ -7,7 +7,7 @@
 <title>Mengarahkan ke lowongan | LokerJabar</title>
 <script>
 (function(){
-  var match=window.location.pathname.match(/^\\/lowongan\\/(.+)\\/?$/);
+  var match=window.location.pathname.match(/^\/lowongan\/(.+)\/?$/);
   if(match){
     var slug=decodeURIComponent(match[1]);
     var idMatch=slug.match(/(job-[a-z0-9-]+)$/i);
