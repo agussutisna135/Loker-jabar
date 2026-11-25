@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Info Lowongan Kerja - LokerJabar</title>
+    <meta property="og:title" id="og-title" content="Info Lowongan Kerja - LokerJabar" />
+    <meta property="og:description" content="Cek kualifikasi dan cara melamar selengkapnya di LokerJabar." />
+    <script>
+        // 1. Ambil teks judul dari alamat URL (contoh: /lowongan-kerja-pabrik-yakult)
+        const path = window.location.pathname.replace(/^\/|\/$/g, '');
+        
+        if (path) {
+            // Ubah tanda hubung (-) menjadi spasi & huruf kapital di awal kata
+            const judulHalaman = path
+                .replace(/-/g, ' ')
+                .replace(/\b\w/g, huruf => huruf.toUpperCase());
+
+            // Pasang sebagai judul halaman
+            document.title = judulHalaman + " - LokerJabar";
+            document.getElementById('og-title').setAttribute('content', judulHalaman);
+
+            // 2. Arahkan otomatis ke sistem index.html Anda tanpa mengubah file index.html
+            window.location.replace('/?lowongan=' + encodeURIComponent(path));
+        } else {
+            window.location.replace('/');
+        }
+    </script>
+</head>
+<body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+        Memuat halaman lowongan...
+    </p>
+</body>
+</html>
